@@ -1,6 +1,7 @@
 plugins {
 	id 'org.springframework.boot' version '2.4.5'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id "com.netflix.dgs.codegen" version "4.6.0"
 	id 'java'
 	id 'idea'
 }
@@ -27,4 +28,9 @@ configurations {
 
 test {
 	useJUnitPlatform()
+}
+generateJava{
+	schemaPaths = ["${projectDir}/src/main/resources/schema"] // List of directories containing schema files
+	packageName = 'com.suraj.graphql.primer.dgs.show.model' // The package name to use to generate sources
+	generateClient = false // Enable generating the type safe query API
 }

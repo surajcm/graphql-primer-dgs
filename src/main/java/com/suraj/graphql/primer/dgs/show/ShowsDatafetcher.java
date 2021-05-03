@@ -3,7 +3,7 @@ package com.suraj.graphql.primer.dgs.show;
 import com.netflix.graphql.dgs.DgsComponent;
 import com.netflix.graphql.dgs.DgsQuery;
 import com.netflix.graphql.dgs.InputArgument;
-import com.suraj.graphql.primer.dgs.show.model.Show;
+import com.suraj.graphql.primer.dgs.show.model.types.Show;
 
 import java.util.List;
 import java.util.stream.Collectors;
